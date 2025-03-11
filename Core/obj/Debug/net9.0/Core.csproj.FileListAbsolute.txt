@@ -9,3 +9,5 @@ C:\Users\Kerem\source\repos\NTierExample2\Core\obj\Debug\net9.0\Core.dll
 C:\Users\Kerem\source\repos\NTierExample2\Core\obj\Debug\net9.0\refint\Core.dll
 C:\Users\Kerem\source\repos\NTierExample2\Core\obj\Debug\net9.0\Core.pdb
 C:\Users\Kerem\source\repos\NTierExample2\Core\obj\Debug\net9.0\ref\Core.dll
+C:\Users\Kerem\source\repos\NTierExample2\Core\obj\Debug\net9.0\Core.csproj.AssemblyReference.cache
+C:\Users\Kerem\source\repos\NTierExample2\Core\obj\Debug\net9.0\Core.sourcelink.json

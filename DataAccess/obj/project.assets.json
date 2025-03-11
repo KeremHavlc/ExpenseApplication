@@ -1599,6 +1599,19 @@
           }
         }
       },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v9.0",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "9.0.2"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
+      },
       "Entity/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v9.0",
@@ -4712,6 +4725,11 @@
         "useSharedDesignerContext.txt"
       ]
     },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
+    },
     "Entity/1.0.0": {
       "type": "project",
       "path": "../Entity/Entity.csproj",
@@ -4720,6 +4738,7 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
+      "Core >= 1.0.0",
       "Entity >= 1.0.0",
       "Microsoft.EntityFrameworkCore.Design >= 9.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.2",
@@ -4759,6 +4778,9 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
+            "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Core.csproj"
+            },
             "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Entity\\Entity.csproj": {
               "projectPath": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Entity\\Entity.csproj"
             }

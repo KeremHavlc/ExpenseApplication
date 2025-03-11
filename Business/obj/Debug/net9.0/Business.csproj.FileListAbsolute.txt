@@ -9,3 +9,12 @@ C:\Users\Kerem\source\repos\NTierExample2\Business\obj\Debug\net9.0\Business.dll
 C:\Users\Kerem\source\repos\NTierExample2\Business\obj\Debug\net9.0\refint\Business.dll
 C:\Users\Kerem\source\repos\NTierExample2\Business\obj\Debug\net9.0\Business.pdb
 C:\Users\Kerem\source\repos\NTierExample2\Business\obj\Debug\net9.0\ref\Business.dll
+C:\Users\Kerem\source\repos\NTierExample2\Business\bin\Debug\net9.0\Core.dll
+C:\Users\Kerem\source\repos\NTierExample2\Business\bin\Debug\net9.0\DataAccess.dll
+C:\Users\Kerem\source\repos\NTierExample2\Business\bin\Debug\net9.0\Entity.dll
+C:\Users\Kerem\source\repos\NTierExample2\Business\bin\Debug\net9.0\DataAccess.pdb
+C:\Users\Kerem\source\repos\NTierExample2\Business\bin\Debug\net9.0\Core.pdb
+C:\Users\Kerem\source\repos\NTierExample2\Business\bin\Debug\net9.0\Entity.pdb
+C:\Users\Kerem\source\repos\NTierExample2\Business\obj\Debug\net9.0\Business.csproj.AssemblyReference.cache
+C:\Users\Kerem\source\repos\NTierExample2\Business\obj\Debug\net9.0\Business.sourcelink.json
+C:\Users\Kerem\source\repos\NTierExample2\Business\obj\Debug\net9.0\Business.csproj.Up2Date
