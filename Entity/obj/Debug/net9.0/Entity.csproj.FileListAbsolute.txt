@@ -1,0 +1,11 @@
+C:\Users\Kerem\source\repos\NTierExample2\Entity\bin\Debug\net9.0\Entity.deps.json
+C:\Users\Kerem\source\repos\NTierExample2\Entity\bin\Debug\net9.0\Entity.dll
+C:\Users\Kerem\source\repos\NTierExample2\Entity\bin\Debug\net9.0\Entity.pdb
+C:\Users\Kerem\source\repos\NTierExample2\Entity\obj\Debug\net9.0\Entity.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kerem\source\repos\NTierExample2\Entity\obj\Debug\net9.0\Entity.AssemblyInfoInputs.cache
+C:\Users\Kerem\source\repos\NTierExample2\Entity\obj\Debug\net9.0\Entity.AssemblyInfo.cs
+C:\Users\Kerem\source\repos\NTierExample2\Entity\obj\Debug\net9.0\Entity.csproj.CoreCompileInputs.cache
+C:\Users\Kerem\source\repos\NTierExample2\Entity\obj\Debug\net9.0\Entity.dll
+C:\Users\Kerem\source\repos\NTierExample2\Entity\obj\Debug\net9.0\refint\Entity.dll
+C:\Users\Kerem\source\repos\NTierExample2\Entity\obj\Debug\net9.0\Entity.pdb
+C:\Users\Kerem\source\repos\NTierExample2\Entity\obj\Debug\net9.0\ref\Entity.dll

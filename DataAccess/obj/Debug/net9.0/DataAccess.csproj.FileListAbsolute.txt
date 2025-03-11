@@ -1,0 +1,17 @@
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\bin\Debug\net9.0\DataAccess.deps.json
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\bin\Debug\net9.0\DataAccess.runtimeconfig.json
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\bin\Debug\net9.0\DataAccess.dll
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\bin\Debug\net9.0\DataAccess.pdb
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\bin\Debug\net9.0\Entity.dll
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\bin\Debug\net9.0\Entity.pdb
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\obj\Debug\net9.0\DataAccess.csproj.AssemblyReference.cache
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\obj\Debug\net9.0\DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfoInputs.cache
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\obj\Debug\net9.0\DataAccess.AssemblyInfo.cs
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\obj\Debug\net9.0\DataAccess.csproj.CoreCompileInputs.cache
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\obj\Debug\net9.0\DataAccess.csproj.Up2Date
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\obj\Debug\net9.0\DataAccess.dll
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\obj\Debug\net9.0\refint\DataAccess.dll
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\obj\Debug\net9.0\DataAccess.pdb
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\obj\Debug\net9.0\DataAccess.genruntimeconfig.cache
+C:\Users\Kerem\source\repos\NTierExample2\DataAccess\obj\Debug\net9.0\ref\DataAccess.dll

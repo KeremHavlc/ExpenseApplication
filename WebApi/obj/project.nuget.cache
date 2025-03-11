@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Tz5d3PYeyAg=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\WebApi.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Kerem\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.2\\microsoft.aspnetcore.openapi.9.0.2.nupkg.sha512",
+    "C:\\Users\\Kerem\\.nuget\\packages\\microsoft.openapi\\1.6.17\\microsoft.openapi.1.6.17.nupkg.sha512"
+  ],
+  "logs": []
+}
