@@ -16,6 +16,7 @@ namespace WebApi.Controllers
         {
             _userService = userService;
         }
+
         [HttpPost("AddUser")]
         public IActionResult AddUser(UserDto userDto)
         {
@@ -23,10 +24,27 @@ namespace WebApi.Controllers
             return Ok();
         }
 
-        [HttpGet]
+
+        [HttpDelete("DeleteUserByEmail/{email}")]
+        public IActionResult DeleteUser(string email)
+        {
+            _userService.Delete(email);
+            return Ok();
+        }
+
+
+        [HttpGet("GetAll")]
         public IActionResult GetAll()
         {
             return Ok(_userService.GetAll());
+        }
+
+
+        [HttpPut("UpdateUser/{id}")]
+        public IActionResult UpdateUser([FromRoute(Name = "id")] Guid id, [FromBody] UserDto userDto)
+        {
+            _userService.Update(id,userDto);
+            return Ok("User updated successfully!");                      
         }
     }
 }

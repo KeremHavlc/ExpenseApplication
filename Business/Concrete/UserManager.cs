@@ -23,6 +23,8 @@ namespace Business.Concrete
         {
             byte[] passwordHash, passwordSalt;
             HashingHelper.CreatePasswordHash(userDto.Password, out passwordHash, out passwordSalt);
+            Guid defaultRoleId = new Guid("00000000-0000-0000-0000-000000000002"); 
+            Guid assignedRoleId = userDto.RoleId ?? defaultRoleId;
             User user = new User
             {
                 Id = Guid.NewGuid(),
@@ -30,29 +32,39 @@ namespace Business.Concrete
                 Username = userDto.Username,
                 PasswordHash = passwordHash,
                 PasswordSalt = passwordSalt,
-                RoleId = userDto.RoleId
+                RoleId = assignedRoleId
             };
 
             _userDal.Add(user);
         }
 
-        public void Delete(UserDto userDto)
+        public void Delete(string email)
         {
-            if(userDto is null)
+            if (string.IsNullOrEmpty(email))
             {
-                throw new ArgumentNullException(nameof(userDto),"UserDto cannot be null!");
+                throw new ArgumentNullException(nameof(email), "Email cannot be null or empty!");
             }
-            var user = _userDal.Get(u => u.Email == userDto.Email);
-            if(user is null)
+
+            var user = _userDal.Get(u => u.Email == email);
+            if (user is null)
             {
                 throw new KeyNotFoundException("User not found!");
             }
+
             _userDal.Delete(user);
         }
 
-        public List<User> GetAll()
+        public List<UserDto> GetAll()
         {
-            return _userDal.GetAll();
+            var users = _userDal.GetAll();
+            var listUser = users.Select(user => new UserDto
+            {
+                Email = user.Email,
+                Username = user.Username,
+                RoleId = user.RoleId              
+            }).ToList();
+          
+            return listUser;
         }
 
         public User GetById(Guid id)
@@ -60,11 +72,32 @@ namespace Business.Concrete
             return _userDal.Get(u => u.Id == id);
         }
 
-        public void Update(UserDto userDto)
+        public void Update(Guid id ,UserDto userDto)
         {
-           
+            Guid defaultRoleId = new Guid("00000000-0000-0000-0000-000000000002");
+            Guid assignedRoleId = userDto.RoleId ?? defaultRoleId;
+
+            var existingUser = _userDal.Get(u => u.Id == id); 
+            if (existingUser is null)
+            {
+                throw new KeyNotFoundException("User not found!");
+            }
+
+            existingUser.Email = userDto.Email;
+            existingUser.Username = userDto.Username;
+            existingUser.RoleId = assignedRoleId;
+
+            if (!string.IsNullOrEmpty(userDto.Password))
+            {
+                byte[] passwordHash, passwordSalt;
+                HashingHelper.CreatePasswordHash(userDto.Password, out passwordHash, out passwordSalt);
+                existingUser.PasswordHash = passwordHash;
+                existingUser.PasswordSalt = passwordSalt;
+            }
+
+            _userDal.Update(existingUser);
         }
 
-       
+        
     }
 }

@@ -7,9 +7,9 @@ namespace Business.Abstract
     public interface IUserService
     {
         void Add(UserDto userDto);
-        void Update(UserDto userDto);
-        void Delete(UserDto userDto);
+        void Update(Guid id ,UserDto userDto);
+        void Delete(string email);
         User GetById(Guid id);
-        List<User> GetAll();
+        List<UserDto> GetAll();
     }
 }
