@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Entity.Concrete;
+using Entity.Dtos;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -10,15 +11,15 @@ namespace WebApi.Controllers
     [ApiController]
     public class UsersController : ControllerBase
     {
-        private readonly IUserService<User> _userService;
-        public UsersController(IUserService<User> userService)
+        private readonly IUserService _userService;
+        public UsersController(IUserService userService)
         {
             _userService = userService;
         }
         [HttpPost("AddUser")]
-        public IActionResult AddUser(User user)
+        public IActionResult AddUser(UserDto userDto)
         {
-            _userService.Add(user);
+            _userService.Add(userDto);
             return Ok();
         }
 

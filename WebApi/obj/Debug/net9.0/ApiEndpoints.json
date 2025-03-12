@@ -18,8 +18,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "user",
-        "Type": "Entity.Concrete.User",
+        "Name": "userDto",
+        "Type": "Entity.Dtos.UserDto",
         "IsRequired": true
       }
     ],

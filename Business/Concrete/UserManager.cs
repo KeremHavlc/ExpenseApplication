@@ -1,6 +1,8 @@
 ﻿using Business.Abstract;
+using Core.Utilities.Hashing;
 using DataAccess.Abstract;
 using Entity.Concrete;
+using Entity.Dtos;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
-    public class UserManager : IUserService<User>
+    public class UserManager : IUserService
     {
         private readonly IUserDal _userDal;
         public UserManager(IUserDal userDal)
@@ -17,13 +19,34 @@ namespace Business.Concrete
             _userDal = userDal;
         }
 
-        public void Add(User user)
+        public void Add(UserDto userDto)
         {
-             _userDal.Add(user);
+            byte[] passwordHash, passwordSalt;
+            HashingHelper.CreatePasswordHash(userDto.Password, out passwordHash, out passwordSalt);
+            User user = new User
+            {
+                Id = Guid.NewGuid(),
+                Email = userDto.Email,
+                Username = userDto.Username,
+                PasswordHash = passwordHash,
+                PasswordSalt = passwordSalt,
+                RoleId = userDto.RoleId
+            };
+
+            _userDal.Add(user);
         }
 
-        public void Delete(User user)
+        public void Delete(UserDto userDto)
         {
+            if(userDto is null)
+            {
+                throw new ArgumentNullException(nameof(userDto),"UserDto cannot be null!");
+            }
+            var user = _userDal.Get(u => u.Email == userDto.Email);
+            if(user is null)
+            {
+                throw new KeyNotFoundException("User not found!");
+            }
             _userDal.Delete(user);
         }
 
@@ -37,9 +60,11 @@ namespace Business.Concrete
             return _userDal.Get(u => u.Id == id);
         }
 
-        public void Update(User user)
+        public void Update(UserDto userDto)
         {
-            _userDal.Update(user);
+           
         }
+
+       
     }
 }

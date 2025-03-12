@@ -22,17 +22,17 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserDto"
               }
             },
             "text/json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserDto"
               }
             },
             "application/*+json": {
               "schema": {
-                "$ref": "#/components/schemas/User"
+                "$ref": "#/components/schemas/UserDto"
               }
             }
           },
@@ -99,147 +99,21 @@
   },
   "components": {
     "schemas": {
-      "Category": {
+      "UserDto": {
         "type": "object",
         "properties": {
-          "categoryName": {
-            "type": "string"
-          },
-          "expenses": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/#/properties/expenses/items"
-            }
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "Expense": {
-        "type": "object",
-        "properties": {
-          "description": {
-            "type": "string"
-          },
-          "amount": {
-            "type": "number",
-            "format": "double"
-          },
-          "expenseDate": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "categoryId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "category": {
-            "$ref": "#/components/schemas/Category"
-          },
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "user": {
-            "$ref": "#/components/schemas/User"
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "Role": {
-        "type": "object",
-        "properties": {
-          "roleName": {
-            "type": "string"
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
-          }
-        }
-      },
-      "User": {
-        "type": "object",
-        "properties": {
-          "username": {
-            "type": "string"
-          },
           "email": {
             "type": "string"
           },
-          "passwordHash": {
-            "type": "string",
-            "format": "byte"
+          "username": {
+            "type": "string"
           },
-          "passwordSalt": {
-            "type": "string",
-            "format": "byte"
+          "password": {
+            "type": "string"
           },
           "roleId": {
             "type": "string",
             "format": "uuid"
-          },
-          "role": {
-            "$ref": "#/components/schemas/Role"
-          },
-          "expenses": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/Expense"
-            }
-          },
-          "id": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "isActive": {
-            "type": "boolean"
-          },
-          "createdAt": {
-            "type": "string",
-            "format": "date-time"
-          },
-          "updatedAt": {
-            "type": "string",
-            "format": "date-time"
           }
         }
       },

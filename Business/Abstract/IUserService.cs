@@ -1,14 +1,15 @@
 ﻿using Entity.Concrete;
+using Entity.Dtos;
 using System.Linq.Expressions;
 
 namespace Business.Abstract
 {
-    public interface IUserService<T> where T : User
+    public interface IUserService
     {
-        void Add(User user);
-        void Update(User user);
-        void Delete(User user);
-        T GetById(Guid id);
+        void Add(UserDto userDto);
+        void Update(UserDto userDto);
+        void Delete(UserDto userDto);
+        User GetById(Guid id);
         List<User> GetAll();
     }
 }
