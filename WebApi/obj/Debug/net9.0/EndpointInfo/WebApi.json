@@ -13,6 +13,38 @@
     }
   ],
   "paths": {
+    "/api/Auths/register": {
+      "post": {
+        "tags": [
+          "Auths"
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            },
+            "text/json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            },
+            "application/*+json": {
+              "schema": {
+                "$ref": "#/components/schemas/RegisterDto"
+              }
+            }
+          },
+          "required": true
+        },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Users/AddUser": {
       "post": {
         "tags": [
@@ -164,6 +196,25 @@
   },
   "components": {
     "schemas": {
+      "RegisterDto": {
+        "type": "object",
+        "properties": {
+          "username": {
+            "type": "string"
+          },
+          "email": {
+            "type": "string"
+          },
+          "password": {
+            "type": "string"
+          },
+          "roleId": {
+            "type": "string",
+            "format": "uuid",
+            "nullable": true
+          }
+        }
+      },
       "UserDto": {
         "type": "object",
         "properties": {
@@ -207,6 +258,9 @@
     }
   },
   "tags": [
+    {
+      "name": "Auths"
+    },
     {
       "name": "Users"
     },

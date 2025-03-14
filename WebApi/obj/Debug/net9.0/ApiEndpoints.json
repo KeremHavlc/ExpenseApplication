@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "WebApi.Controllers.AuthsController",
+    "Method": "AddUser",
+    "RelativePath": "api/Auths/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "registerDto",
+        "Type": "Entity.Dtos.RegisterDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi.Controllers.UsersController",
     "Method": "AddUser",
     "RelativePath": "api/Users/AddUser",

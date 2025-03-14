@@ -1,4 +1,5 @@
 ﻿using Business.Abstract;
+using Core.Constants;
 using Core.Utilities.Hashing;
 using DataAccess.Abstract;
 using Entity.Concrete;
@@ -23,8 +24,10 @@ namespace Business.Concrete
         {
             byte[] passwordHash, passwordSalt;
             HashingHelper.CreatePasswordHash(userDto.Password, out passwordHash, out passwordSalt);
-            Guid defaultRoleId = new Guid("00000000-0000-0000-0000-000000000002"); 
+
+            Guid defaultRoleId = RoleGuids.User;
             Guid assignedRoleId = userDto.RoleId ?? defaultRoleId;
+
             User user = new User
             {
                 Id = Guid.NewGuid(),
