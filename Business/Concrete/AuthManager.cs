@@ -1,5 +1,6 @@
 ﻿using Business.Abstract;
 using Core.Constants;
+using Core.Utilities.Hashing;
 using Entity.Dtos;
 using System;
 using System.Collections.Generic;
@@ -18,7 +19,27 @@ namespace Business.Concrete
             _userService = userService;
         }
 
-        public string Add(RegisterDto registerDto)
+        public string Login(LoginDto loginDto)
+        {
+            var user = _userService.GetByEmail(loginDto.Email);
+
+            // Kullanıcı kontrolü
+            if (user == null)
+            {
+                return "Giriş başarısız! Kullanıcı bulunamadı.";
+            }
+
+            var result = HashingHelper.VerifyPasswordHash(loginDto.Password, user.PasswordHash, user.PasswordSalt);
+
+            if (result)
+            {
+                return "Giriş başarılı!";
+            }
+
+            return "Giriş başarısız! Lütfen bilgilerinizi kontrol edin.";
+        }
+
+        public string Register(RegisterDto registerDto)
         {
             if (registerDto.Email == null)
             {

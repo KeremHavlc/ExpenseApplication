@@ -22,6 +22,10 @@ namespace Core.Utilities.Hashing
             using (var hmac = new System.Security.Cryptography.HMACSHA512(passwordSalt))
             {
                 var computedHash = hmac.ComputeHash(Encoding.UTF8.GetBytes(password));
+
+                if (computedHash.Length != passwordHash.Length) // Uzunluk kontrolü şart
+                    return false;
+
                 for (int i = 0; i < computedHash.Length; i++)
                 {
                     if (computedHash[i] != passwordHash[i])
@@ -29,8 +33,9 @@ namespace Core.Utilities.Hashing
                         return false;
                     }
                 }
+
+                return true; // Buraya taşıdım
             }
-            return true;
         }
     }
 }

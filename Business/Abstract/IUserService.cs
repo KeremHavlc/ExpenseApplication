@@ -9,7 +9,7 @@ namespace Business.Abstract
         void Add(UserDto userDto);
         void Update(Guid id ,UserDto userDto);
         void Delete(string email);
-        User GetById(Guid id);
+        User GetByEmail(string email);
         List<UserDto> GetAll();
     }
 }

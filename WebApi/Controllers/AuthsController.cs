@@ -15,10 +15,16 @@ namespace WebApi.Controllers
             _authService = authService; 
         }
         [HttpPost("register")]
-        public IActionResult AddUser(RegisterDto registerDto)
+        public IActionResult Register(RegisterDto registerDto)
         {
-            _authService.Add(registerDto);
+            _authService.Register(registerDto);
             return Ok("Kullanıcı başarılı bir şekilde kayıt oldu!");
+        }
+        [HttpPost("login")]
+        public IActionResult Login(LoginDto loginDto)
+        {
+            var result = _authService.Login(loginDto);
+            return Ok(result);
         }
     }
 }

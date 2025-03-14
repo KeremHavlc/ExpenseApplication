@@ -70,9 +70,9 @@ namespace Business.Concrete
             return listUser;
         }
 
-        public User GetById(Guid id)
+        public User GetByEmail(string email)
         {
-            return _userDal.Get(u => u.Id == id);
+            return _userDal.Get(u => u.Email == email);
         }
 
         public void Update(Guid id ,UserDto userDto)
