@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A92FB1CF-CD97-4E70-97FF-F1E8A70A687D}|Core\\Core.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\core\\utilities\\security\\jwt\\itokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92FB1CF-CD97-4E70-97FF-F1E8A70A687D}|Core\\Core.csproj|solutionrelative:core\\utilities\\security\\jwt\\itokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A92FB1CF-CD97-4E70-97FF-F1E8A70A687D}|Core\\Core.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\core\\utilities\\security\\jwt\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A92FB1CF-CD97-4E70-97FF-F1E8A70A687D}|Core\\Core.csproj|solutionrelative:core\\utilities\\security\\jwt\\token.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E4F4178A-4E9C-43B3-9E8B-8EB337AB8212}|WebApi\\WebApi.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4F4178A-4E9C-43B3-9E8B-8EB337AB8212}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A92FB1CF-CD97-4E70-97FF-F1E8A70A687D}|Core\\Core.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\core\\utilities\\security\\jwt\\tokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92FB1CF-CD97-4E70-97FF-F1E8A70A687D}|Core\\Core.csproj|solutionrelative:core\\utilities\\security\\jwt\\tokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E4F4178A-4E9C-43B3-9E8B-8EB337AB8212}|WebApi\\WebApi.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{E4F4178A-4E9C-43B3-9E8B-8EB337AB8212}|WebApi\\WebApi.csproj|solutionrelative:webapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A92FB1CF-CD97-4E70-97FF-F1E8A70A687D}|Core\\Core.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\core\\utilities\\security\\jwt\\itokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92FB1CF-CD97-4E70-97FF-F1E8A70A687D}|Core\\Core.csproj|solutionrelative:core\\utilities\\security\\jwt\\itokenhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,55 +34,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ITokenHandler.cs",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Utilities\\Security\\Jwt\\ITokenHandler.cs",
-              "RelativeDocumentMoniker": "Core\\Utilities\\Security\\Jwt\\ITokenHandler.cs",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Utilities\\Security\\Jwt\\ITokenHandler.cs",
-              "RelativeToolTip": "Core\\Utilities\\Security\\Jwt\\ITokenHandler.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwA8AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T23:54:54.215Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Token.cs",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Utilities\\Security\\Jwt\\Token.cs",
-              "RelativeDocumentMoniker": "Core\\Utilities\\Security\\Jwt\\Token.cs",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Utilities\\Security\\Jwt\\Token.cs",
-              "RelativeToolTip": "Core\\Utilities\\Security\\Jwt\\Token.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T23:52:52.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\Program.cs",
-              "RelativeDocumentMoniker": "WebApi\\Program.cs",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\Program.cs",
-              "RelativeToolTip": "WebApi\\Program.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAYwBkAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-14T21:34:22.238Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\appsettings.json",
               "RelativeDocumentMoniker": "WebApi\\appsettings.json",
               "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\appsettings.json",
               "RelativeToolTip": "WebApi\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-03-14T21:33:19.67Z",
+              "WhenOpened": "2025-03-18T20:35:51.348Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TokenHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Utilities\\Security\\Jwt\\TokenHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Utilities\\Security\\Jwt\\TokenHandler.cs",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Utilities\\Security\\Jwt\\TokenHandler.cs",
+              "RelativeToolTip": "Core\\Utilities\\Security\\Jwt\\TokenHandler.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAACAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T20:16:54.744Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITokenHandler.cs",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Utilities\\Security\\Jwt\\ITokenHandler.cs",
+              "RelativeDocumentMoniker": "Core\\Utilities\\Security\\Jwt\\ITokenHandler.cs",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Utilities\\Security\\Jwt\\ITokenHandler.cs",
+              "RelativeToolTip": "Core\\Utilities\\Security\\Jwt\\ITokenHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T20:16:38.965Z"
             }
           ]
         },

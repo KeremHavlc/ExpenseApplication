@@ -9,7 +9,7 @@
     "Parameters": [
       {
         "Name": "loginDto",
-        "Type": "Entity.Dtos.LoginDto",
+        "Type": "Core.Dto.LoginDto",
         "IsRequired": true
       }
     ],
@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "registerDto",
-        "Type": "Entity.Dtos.RegisterDto",
+        "Type": "Core.Dto.RegisterDto",
         "IsRequired": true
       }
     ],
@@ -41,7 +41,7 @@
     "Parameters": [
       {
         "Name": "userDto",
-        "Type": "Entity.Dtos.UserDto",
+        "Type": "Core.Dto.UserDto",
         "IsRequired": true
       }
     ],
@@ -88,7 +88,7 @@
       },
       {
         "Name": "userDto",
-        "Type": "Entity.Dtos.UserDto",
+        "Type": "Core.Dto.UserDto",
         "IsRequired": true
       }
     ],

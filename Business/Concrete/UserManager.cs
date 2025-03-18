@@ -3,7 +3,7 @@ using Core.Constants;
 using Core.Utilities.Hashing;
 using DataAccess.Abstract;
 using Entity.Concrete;
-using Entity.Dtos;
+using Core.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;

@@ -1,5 +1,4 @@
-﻿using Entity.Concrete;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -11,7 +10,6 @@ namespace Core.Utilities.Security.Jwt
 {
     public interface ITokenHandler
     {
-        //İçerisine verilecek User nesnesinden token oluşturacak
-        Token CreateToken()
+        Token CreateToken(Guid id , string email , string roleId);
     }
 }

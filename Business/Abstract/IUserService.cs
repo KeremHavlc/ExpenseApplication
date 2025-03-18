@@ -1,5 +1,5 @@
 ﻿using Entity.Concrete;
-using Entity.Dtos;
+using Core.Dto;
 using System.Linq.Expressions;
 
 namespace Business.Abstract
