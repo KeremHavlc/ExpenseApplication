@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Security.Claims;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
@@ -26,11 +29,37 @@ namespace Core.Utilities.Security.Jwt
             SymmetricSecurityKey securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["Token:SecurityKey"]));
 
             //Şifrelenmiş Security Key
-            SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+            SigningCredentials signingCredentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
 
             //Token Ayarları yapılıyor.
             token.Expiration = DateTime.Now.AddMinutes(60);
-            
+            JwtSecurityToken jwtSecurityToken = new JwtSecurityToken(
+                issuer: Configuration["Token:Issuer"],
+                audience: Configuration["Token:Audience"],
+                expires: token.Expiration,
+                notBefore: DateTime.Now,
+                signingCredentials: signingCredentials,
+                claims: SetClaims(id, email, roleId)
+            );
+
+            //Token oluşturucu sınıfından bir örnek alalım.
+            JwtSecurityTokenHandler jwtSecurityTokenHandler = new JwtSecurityTokenHandler();
+
+            //Token oluşturuluyor.
+            token.AccessToken = jwtSecurityTokenHandler.WriteToken(jwtSecurityToken);
+            return token;
         }
-    }
+
+        public IEnumerable<Claim> SetClaims(Guid id, string email, string roleId)
+        {
+            var claims = new List<Claim>
+            {
+                new Claim("id", id.ToString()),
+                new Claim("email", email),
+                new Claim(ClaimTypes.Role, roleId)
+            };
+
+            return claims;
+        }
+    }      
 }

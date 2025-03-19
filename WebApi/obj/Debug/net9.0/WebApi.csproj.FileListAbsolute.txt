@@ -86,3 +86,6 @@ C:\Users\Kerem\source\repos\NTierExample2\WebApi\obj\Debug\net9.0\WebApi.pdb
 C:\Users\Kerem\source\repos\NTierExample2\WebApi\obj\Debug\net9.0\WebApi.genruntimeconfig.cache
 C:\Users\Kerem\source\repos\NTierExample2\WebApi\obj\Debug\net9.0\ref\WebApi.dll
 C:\Users\Kerem\source\repos\NTierExample2\WebApi\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Kerem\source\repos\NTierExample2\WebApi\bin\Debug\net9.0\Microsoft.Extensions.Configuration.dll
+C:\Users\Kerem\source\repos\NTierExample2\WebApi\bin\Debug\net9.0\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Kerem\source\repos\NTierExample2\WebApi\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll

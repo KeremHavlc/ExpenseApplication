@@ -1,4 +1,5 @@
 ﻿using Core.Dto;
+using Core.Utilities.Security.Jwt;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,6 @@ namespace Business.Abstract
     public interface IAuthService
     {
         string Register(RegisterDto registerDto);
-
-        string Login(LoginDto loginDto);
+        Token Login(LoginDto loginDto);
     }
 }

@@ -7,36 +7,40 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Core.Utilities.Security.Jwt;
 
 namespace Business.Concrete
 {
     public class AuthManager : IAuthService
     {
         private readonly IUserService _userService;
-
-        public AuthManager(IUserService userService)
+        private readonly ITokenHandler _tokenHandler;
+        public AuthManager(IUserService userService , ITokenHandler tokenHandler)
         {
             _userService = userService;
+            _tokenHandler = tokenHandler;
         }
 
-        public string Login(LoginDto loginDto)
+        public Token Login(LoginDto loginDto)
         {
             var user = _userService.GetByEmail(loginDto.Email);
 
             // Kullanıcı kontrolü
             if (user == null)
             {
-                return "Giriş başarısız! Kullanıcı bulunamadı.";
+                return null;
             }
 
             var result = HashingHelper.VerifyPasswordHash(loginDto.Password, user.PasswordHash, user.PasswordSalt);
 
-            if (result)
+            if (!result)
             {
-                return "Giriş başarılı!";
+                return null;
             }
 
-            return "Giriş başarısız! Lütfen bilgilerinizi kontrol edin.";
+            var token = _tokenHandler.CreateToken(user.Id, user.Email, user.RoleId.ToString());
+
+            return token;
         }
 
         public string Register(RegisterDto registerDto)
