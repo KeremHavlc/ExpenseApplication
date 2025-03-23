@@ -31,9 +31,18 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
         ClockSkew = TimeSpan.Zero
     };
 });
-
-
-
+//CORS ayarlarý yapýldý.(React (front) tarafýnda cevap verebilmesi için!)
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowOrigin",
+        builder =>
+        {
+            builder.WithOrigins("http://localhost:5173") // React uygulamasýnýn URL'sini burada belirt
+                   .AllowCredentials()                  // Cookie gönderimini aktif eder
+                   .AllowAnyMethod()                     // GET, POST, PUT, DELETE vb. izin verir
+                   .AllowAnyHeader();                    // Tüm baþlýklara izin verir
+        });
+});
 
 
 //Services Registration --AUTOFAC--
@@ -55,6 +64,9 @@ if (app.Environment.IsDevelopment())
 app.UseSwagger();
 app.UseSwaggerUI();
 app.UseHttpsRedirection();
+
+//Yapýlandýrýlan Cors ayarlarý uygulandý.
+app.UseCors("AllowOrigin");
 
 app.UseAuthorization();
 
