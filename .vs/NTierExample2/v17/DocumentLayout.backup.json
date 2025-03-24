@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{E4F4178A-4E9C-43B3-9E8B-8EB337AB8212}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\business\\abstract\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|solutionrelative:business\\abstract\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\business\\concrete\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|solutionrelative:business\\concrete\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,13 +38,25 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAuthService.cs",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Abstract\\IAuthService.cs",
+              "RelativeDocumentMoniker": "Business\\Abstract\\IAuthService.cs",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Abstract\\IAuthService.cs",
+              "RelativeToolTip": "Business\\Abstract\\IAuthService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-24T20:07:37.573Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "AuthsController.cs",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\Controllers\\AuthsController.cs",
               "RelativeDocumentMoniker": "WebApi\\Controllers\\AuthsController.cs",
               "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\Controllers\\AuthsController.cs",
               "RelativeToolTip": "WebApi\\Controllers\\AuthsController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAC0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAswDYAAAA1AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-23T21:29:56.687Z",
               "EditorCaption": ""
@@ -53,20 +69,20 @@
               "RelativeDocumentMoniker": "WebApi\\Program.cs",
               "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\Program.cs",
               "RelativeToolTip": "WebApi\\Program.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAAAC4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAADcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-23T21:36:40.345Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthManager.cs",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Concrete\\AuthManager.cs",
               "RelativeDocumentMoniker": "Business\\Concrete\\AuthManager.cs",
               "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Concrete\\AuthManager.cs",
               "RelativeToolTip": "Business\\Concrete\\AuthManager.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAxwBcAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAgwB4AAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-22T22:55:18.606Z"
             }

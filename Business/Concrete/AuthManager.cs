@@ -43,20 +43,18 @@ namespace Business.Concrete
             return token;
         }
 
-        public string Register(RegisterDto registerDto)
+        public (bool success, string message) Register(RegisterDto registerDto)
         {
-            if (registerDto.Email == null)
-            {
-                return ("Email boş olamaz!");
-            }        
-            if(registerDto.Username == null)
-            {
-                return ("Kullanıcı adı boş olamaz!");
-            }
-            if (registerDto.Password == null)
-            {
-                return ("Şifre boş olamaz!");
-            }
+            //IsNullOrWhiteSpace null , "" veya boşluk karakteri mi içerdiğini kontrol eder.Bunlardan biri ise true döner.
+            //yani true dönmesi boş dönmesi demektir ve return de false döndeririz.
+            if (string.IsNullOrWhiteSpace(registerDto.Email))
+                return (false, "Email boş olamaz!");
+
+            if (string.IsNullOrWhiteSpace(registerDto.Username))
+                return (false, "Kullanıcı adı boş olamaz!");
+
+            if (string.IsNullOrWhiteSpace(registerDto.Password))
+                return (false, "Şifre boş olamaz!");
             Guid defaultRoleId = RoleGuids.User;
             Guid assignedRoleId = registerDto.RoleId ?? defaultRoleId;
             var userDto = new UserDto
@@ -66,8 +64,16 @@ namespace Business.Concrete
                 Password = registerDto.Password,
                 RoleId = assignedRoleId
             };
-            _userService.Add(userDto);
-            return ("Kayıt işlemi başarılı!");
+            try
+            {
+                _userService.Add(userDto);
+                // Kullanıcı oluşturma işlemleri
+                return (true, "Kayıt başarılı!");
+            }
+            catch
+            {
+                return (false, "Kayıt sırasında hata oluştu");
+            }
         }
     }
 }

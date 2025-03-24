@@ -17,6 +17,16 @@
   },
   {
     "ContainingType": "WebApi.Controllers.AuthsController",
+    "Method": "Logout",
+    "RelativePath": "api/Auths/logout",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "WebApi.Controllers.AuthsController",
     "Method": "Register",
     "RelativePath": "api/Auths/register",
     "HttpMethod": "POST",
