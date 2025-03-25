@@ -40,10 +40,9 @@ namespace WebApi.Controllers
             // Cookie'yi ekleme işlemi
             Response.Cookies.Append("authToken", result.AccessToken, new CookieOptions
             {
-                HttpOnly = true,      // XSS saldırılarına karşı koruma sağlar
-                Secure = false,        // HTTPS üzerinde çalışır (dev ortamında HTTPS kullanmazsan `false` yapabilirsin)
-                SameSite = SameSiteMode.Lax, // CSRF saldırılarına karşı koruma sağlar
-                Expires = DateTimeOffset.UtcNow.AddHours(1), // Token süresi kadar ayarlayabilirsin                              
+                HttpOnly = true,
+                Secure = true, // HTTPS varsa true, HTTP’de false
+                SameSite = SameSiteMode.None
             });
             
             return Ok(new { message = "Giriş başarılı." });
@@ -52,13 +51,19 @@ namespace WebApi.Controllers
         [HttpPost("logout")]
         public IActionResult Logout()
         {
-            if (Request.Cookies["authToken"] != null)
+            if (Request.Cookies["AuthToken"] != null)
             {
-            // Cookie'yi silme işlemi
-            Response.Cookies.Delete("authToken");
-            return Ok(new { message = "Çıkış başarılı." });
+
+                Response.Cookies.Append("authToken", "",new CookieOptions
+                {
+                    HttpOnly = true,
+                    Secure = true,
+                    SameSite = SameSiteMode.None
+                });
+                
             }
-            return BadRequest(new { message = "Bir Hata Oluştu!" });
+
+            return Ok(new { message = "Logout successful." });
         }
     }
 }

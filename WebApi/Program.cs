@@ -34,14 +34,12 @@ builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJw
 //CORS ayarlarý yapýldý.(React (front) tarafýnda cevap verebilmesi için!)
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowOrigin",
-        builder =>
-        {
-            builder.WithOrigins("http://localhost:5173") // React uygulamasýnýn URL'sini burada belirt
-                   .AllowCredentials()                  // Cookie gönderimini aktif eder
-                   .AllowAnyMethod()                     // GET, POST, PUT, DELETE vb. izin verir
-                   .AllowAnyHeader();                    // Tüm baþlýklara izin verir
-        });
+    options.AddPolicy("AllowAll",
+        builder => builder
+            .WithOrigins("http://localhost:5173") // React'in çalýþtýðý domain
+            .AllowAnyMethod()
+            .AllowAnyHeader()
+            .AllowCredentials()); // Cookie'lerin çalýþmasý için þart!
 });
 
 
@@ -61,15 +59,16 @@ if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();
 }
-app.UseSwagger();
-app.UseSwaggerUI();
+
 app.UseHttpsRedirection();
 
 //Yapýlandýrýlan Cors ayarlarý uygulandý.
-app.UseCors("AllowOrigin");
+app.UseCors("AllowAll");
 
 app.UseAuthorization();
 
 app.MapControllers();
 
+app.UseSwagger();
+app.UseSwaggerUI();
 app.Run();
