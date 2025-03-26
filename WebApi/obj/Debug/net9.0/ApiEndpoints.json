@@ -42,6 +42,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "WebApi.Controllers.ExpensesController",
+    "Method": "AddExpense",
+    "RelativePath": "api/Expenses/AddExpense",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "expenseDto",
+        "Type": "Core.Dto.ExpenseDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "WebApi.Controllers.UsersController",
     "Method": "AddUser",
     "RelativePath": "api/Users/AddUser",

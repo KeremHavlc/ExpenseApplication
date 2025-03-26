@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E4F4178A-4E9C-43B3-9E8B-8EB337AB8212}|WebApi\\WebApi.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\webapi\\controllers\\authscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E4F4178A-4E9C-43B3-9E8B-8EB337AB8212}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\authscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{E4F4178A-4E9C-43B3-9E8B-8EB337AB8212}|WebApi\\WebApi.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E4F4178A-4E9C-43B3-9E8B-8EB337AB8212}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\business\\abstract\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|solutionrelative:business\\abstract\\iauthservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E4F4178A-4E9C-43B3-9E8B-8EB337AB8212}|WebApi\\WebApi.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\webapi\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E4F4178A-4E9C-43B3-9E8B-8EB337AB8212}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\expensescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\business\\concrete\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|solutionrelative:business\\concrete\\authmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\business\\concrete\\expensemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|solutionrelative:business\\concrete\\expensemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E1B54450-EF33-430E-9FF6-D5BCF3BABB87}|Entity\\Entity.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\entity\\concrete\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E1B54450-EF33-430E-9FF6-D5BCF3BABB87}|Entity\\Entity.csproj|solutionrelative:entity\\concrete\\expense.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A92FB1CF-CD97-4E70-97FF-F1E8A70A687D}|Core\\Core.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\core\\dto\\expensedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A92FB1CF-CD97-4E70-97FF-F1E8A70A687D}|Core\\Core.csproj|solutionrelative:core\\dto\\expensedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|c:\\users\\kerem\\source\\repos\\ntierexample2\\business\\abstract\\iexpenseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{248BFD1E-640D-4E11-B8BF-C3006CC18F46}|Business\\Business.csproj|solutionrelative:business\\abstract\\iexpenseservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,53 +46,81 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IAuthService.cs",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Abstract\\IAuthService.cs",
-              "RelativeDocumentMoniker": "Business\\Abstract\\IAuthService.cs",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Abstract\\IAuthService.cs",
-              "RelativeToolTip": "Business\\Abstract\\IAuthService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T20:07:37.573Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AuthsController.cs",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\Controllers\\AuthsController.cs",
-              "RelativeDocumentMoniker": "WebApi\\Controllers\\AuthsController.cs",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\Controllers\\AuthsController.cs",
-              "RelativeToolTip": "WebApi\\Controllers\\AuthsController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAswDAAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T21:29:56.687Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\Program.cs",
               "RelativeDocumentMoniker": "WebApi\\Program.cs",
               "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\Program.cs",
               "RelativeToolTip": "WebApi\\Program.cs",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAAEgAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAA8AAAAAAAAAAADwvxcAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-23T21:36:40.345Z",
+              "WhenOpened": "2025-03-26T18:20:08.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ExpensesController.cs",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\Controllers\\ExpensesController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\ExpensesController.cs",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\WebApi\\Controllers\\ExpensesController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\ExpensesController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T18:01:44.793Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "AuthManager.cs",
-              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Concrete\\AuthManager.cs",
-              "RelativeDocumentMoniker": "Business\\Concrete\\AuthManager.cs",
-              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Concrete\\AuthManager.cs",
-              "RelativeToolTip": "Business\\Concrete\\AuthManager.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwB4AAAAcAAAAAAAAAA==",
+              "Title": "Expense.cs",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Entity\\Concrete\\Expense.cs",
+              "RelativeDocumentMoniker": "Entity\\Concrete\\Expense.cs",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Entity\\Concrete\\Expense.cs",
+              "RelativeToolTip": "Entity\\Concrete\\Expense.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-22T22:55:18.606Z"
+              "WhenOpened": "2025-03-26T17:49:39.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IExpenseService.cs",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Abstract\\IExpenseService.cs",
+              "RelativeDocumentMoniker": "Business\\Abstract\\IExpenseService.cs",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Abstract\\IExpenseService.cs",
+              "RelativeToolTip": "Business\\Abstract\\IExpenseService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T17:42:32.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ExpenseDto.cs",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Dto\\ExpenseDto.cs",
+              "RelativeDocumentMoniker": "Core\\Dto\\ExpenseDto.cs",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Core\\Dto\\ExpenseDto.cs",
+              "RelativeToolTip": "Core\\Dto\\ExpenseDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T17:34:09.005Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ExpenseManager.cs",
+              "DocumentMoniker": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Concrete\\ExpenseManager.cs",
+              "RelativeDocumentMoniker": "Business\\Concrete\\ExpenseManager.cs",
+              "ToolTip": "C:\\Users\\Kerem\\source\\repos\\NTierExample2\\Business\\Concrete\\ExpenseManager.cs",
+              "RelativeToolTip": "Business\\Concrete\\ExpenseManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-26T17:45:11.123Z",
+              "EditorCaption": ""
             }
           ]
         },

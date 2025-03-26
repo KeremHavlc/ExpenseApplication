@@ -20,6 +20,10 @@ namespace Business.DependencyResolvers
             builder.RegisterType<AuthManager>().As<IAuthService>();
 
             builder.RegisterType<TokenHandler>().As<ITokenHandler>();
+
+            builder.RegisterType<ExpenseManager>().As<IExpenseService>();
+            builder.RegisterType<EfExpenseDal>().As<IExpenseDal>();
+
         }
     }
 }
