@@ -12,8 +12,8 @@ namespace Business.Abstract
         void Add(ExpenseDto expenseDto);
         void Update(Guid id,ExpenseDto expenseDto);
         void Delete(Guid id);
-        List<ExpenseDto> GetExpenses();
-        ExpenseDto GetExpenseById(Guid id);
+        List<ExpenseDto> GetExpensesByUserId(Guid userId);
+        List<ExpenseDto> GetExpenseByCategoryId(Guid categoryId , Guid userId);
 
     }
 }

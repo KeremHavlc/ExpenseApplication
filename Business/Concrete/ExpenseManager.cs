@@ -42,25 +42,26 @@ namespace Business.Concrete
             }
         }
 
-        public ExpenseDto GetExpenseById(Guid id)
+        public List<ExpenseDto> GetExpenseByCategoryId(Guid categoryId, Guid userId)
         {
-            var expense = _expenseDal.Get(e => e.Id == id);
-            if (expense == null) return null;
-            return new ExpenseDto
-            {                
+            var expenses = _expenseDal.GetAll(x => x.UserId == userId && x.CategoryId == categoryId);
+
+            return expenses.Select(expense => new ExpenseDto
+            {
                 Title = expense.Title,
                 Description = expense.Description,
                 Amount = expense.Amount,
                 ExpenseDate = expense.ExpenseDate,
                 CategoryId = expense.CategoryId,
                 UserId = expense.UserId
-            };
+            }).ToList();
         }
 
-        public List<ExpenseDto> GetExpenses()
+        public List<ExpenseDto> GetExpensesByUserId(Guid userId)
         {
-           var expense = _expenseDal.GetAll();
-            return expense.Select(expense => new ExpenseDto
+            var expenses = _expenseDal.GetAll(x => x.UserId == userId);  
+
+            return expenses.Select(expense => new ExpenseDto
             {
                 Title = expense.Title,
                 Description = expense.Description,
