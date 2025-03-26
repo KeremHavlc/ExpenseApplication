@@ -2,11 +2,6 @@
 using Core.Dto;
 using DataAccess.Abstract;
 using Entity.Concrete;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Business.Concrete
 {
@@ -22,7 +17,6 @@ namespace Business.Concrete
         {
             var newExpense = new Expense
             {
-                Id = Guid.NewGuid(),
                 Title = expenseDto.Title,
                 Description = expenseDto.Description,
                 Amount = expenseDto.Amount,
@@ -42,34 +36,25 @@ namespace Business.Concrete
             }
         }
 
-        public List<ExpenseDto> GetExpenseByCategoryId(Guid categoryId, Guid userId)
+        public List<Expense> GetExpenseByCategoryId(Guid categoryId, Guid userId)
         {
             var expenses = _expenseDal.GetAll(x => x.UserId == userId && x.CategoryId == categoryId);
 
-            return expenses.Select(expense => new ExpenseDto
+            if(expenses == null)
             {
-                Title = expense.Title,
-                Description = expense.Description,
-                Amount = expense.Amount,
-                ExpenseDate = expense.ExpenseDate,
-                CategoryId = expense.CategoryId,
-                UserId = expense.UserId
-            }).ToList();
+                return null;
+            }
+            return expenses;
         }
 
-        public List<ExpenseDto> GetExpensesByUserId(Guid userId)
+        public List<Expense> GetExpensesByUserId(Guid userId)
         {
-            var expenses = _expenseDal.GetAll(x => x.UserId == userId);  
-
-            return expenses.Select(expense => new ExpenseDto
+            var expenses = _expenseDal.GetAll(x => x.UserId == userId);
+            if(expenses == null)
             {
-                Title = expense.Title,
-                Description = expense.Description,
-                Amount = expense.Amount,
-                ExpenseDate = expense.ExpenseDate,
-                CategoryId = expense.CategoryId,
-                UserId = expense.UserId
-            }).ToList();
+                return null;
+            }
+            return expenses;
         }
 
         public void Update(Guid id, ExpenseDto expenseDto)

@@ -76,7 +76,7 @@
   {
     "ContainingType": "WebApi.Controllers.ExpensesController",
     "Method": "GetAllExpensesByUserId",
-    "RelativePath": "api/Expenses/GetExpensesAll/{id}",
+    "RelativePath": "api/Expenses/GetExpensesAllByUserId/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,

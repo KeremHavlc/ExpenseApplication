@@ -186,7 +186,7 @@
         }
       }
     },
-    "/api/Expenses/GetExpensesAll/{id}": {
+    "/api/Expenses/GetExpensesAllByUserId/{id}": {
       "get": {
         "tags": [
           "Expenses"
