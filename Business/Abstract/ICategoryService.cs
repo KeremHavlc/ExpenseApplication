@@ -1,4 +1,5 @@
 ﻿using Core.Dto;
+using Entity.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace Business.Abstract
 {
     public interface ICategoryService
     {
-        void Add(CategoryDto categoryDto);
-        void Delete(Guid categoryId);
-        void Update(Guid categoryId , CategoryDto categoryDto);
-        List<CategoryDto> GetAllCategoryByUserId(Guid userId);
+        (bool success , string message) Add(CategoryDto categoryDto);
+        (bool success, string message) Delete(Guid categoryId);
+        (bool success, string message) Update(Guid categoryId , CategoryDto categoryDto);
+        List<Category> GetAllCategoryByUserId();
 
     }
 }

@@ -28,6 +28,8 @@ namespace Business.DependencyResolvers
             builder.RegisterType<CurrentUserService>().As<ICurrentUserService>();
             builder.RegisterType<HttpContextAccessor>().As<IHttpContextAccessor>();
 
+            builder.RegisterType<CategoryManager>().As<ICategoryService>();
+            builder.RegisterType<EfCategoryDal>().As<ICategoryDal>();
         }
     }
 }
