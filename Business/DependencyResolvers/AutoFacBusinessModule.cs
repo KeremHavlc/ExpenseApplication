@@ -6,6 +6,7 @@ using Core.Utilities.Security.Jwt;
 using DataAccess.Abstract;
 using DataAccess.Concrete;
 using Entity.Concrete;
+using Microsoft.AspNetCore.Http;
 using System.Reflection;
 
 namespace Business.DependencyResolvers
@@ -23,6 +24,9 @@ namespace Business.DependencyResolvers
 
             builder.RegisterType<ExpenseManager>().As<IExpenseService>();
             builder.RegisterType<EfExpenseDal>().As<IExpenseDal>();
+
+            builder.RegisterType<CurrentUserService>().As<ICurrentUserService>();
+            builder.RegisterType<HttpContextAccessor>().As<IHttpContextAccessor>();
 
         }
     }

@@ -21,27 +21,39 @@ namespace WebApi.Controllers
         [HttpPost("AddExpense")]
         public IActionResult AddExpense(ExpenseDto expenseDto)
         {
-            _expenseService.Add(expenseDto);
-            return Ok("Başarıyla Eklendi!");
+            var res = _expenseService.Add(expenseDto);
+            if(res.success == false)
+            {
+                return BadRequest(res.message);
+            }
+            return Ok(res.message);
         }
 
         [HttpPost("DeleteExpense")]
         public IActionResult DeleteExpense(Guid id)
         {
-            _expenseService.Delete(id);
-            return Ok("Başarıyla Silindi!");
+            var res = _expenseService.Delete(id);
+            if (res.success == false)
+            {
+                return BadRequest(res.message);
+            }
+            return Ok(res.message);
         }
         [HttpPost("UpdateExpense/{id}")]
         public IActionResult UpdateExpense([FromRoute(Name = "id")] Guid id, [FromBody] ExpenseDto expenseDto)
         {
-            _expenseService.Update(id, expenseDto);
-            return Ok("Başarıyla Güncellendi!");
+            var res = _expenseService.Update(id, expenseDto);
+            if(res.success == false)
+            {
+                return BadRequest(res.message);
+            }
+            return Ok(res.message);
         }
 
-        [HttpGet("GetExpensesAllByUserId/{id}")]
-        public IActionResult GetAllExpensesByUserId([FromRoute] Guid id)
+        [HttpGet("GetExpensesAllByUserId")]
+        public IActionResult GetAllExpensesByUserId()
         {
-            var expenses = _expenseService.GetExpensesByUserId(id);
+            var expenses = _expenseService.GetExpensesByUserId();
 
             if (expenses == null || !expenses.Any())
             {
@@ -50,17 +62,24 @@ namespace WebApi.Controllers
 
             return Ok(expenses);
         }
-        [HttpGet("GetExpensesByCategoryId/{categoryId}/{userId}")]
-        public IActionResult GetExpensesByCategoryId([FromRoute] Guid categoryId, [FromRoute] Guid userId)
+        [HttpGet("GetExpensesByCategoryId/{categoryId}")]
+        public IActionResult GetExpensesByCategoryId([FromRoute] Guid categoryId)
         {
-            var expenses = _expenseService.GetExpenseByCategoryId(categoryId, userId);
-
-            if (expenses == null || !expenses.Any()) // Liste boşsa NotFound dön
+            try
             {
-                return NotFound("Bu kategoriye ait harcama bulunamadı!");
-            }
+                var expenses = _expenseService.GetExpenseByCategoryId(categoryId); 
 
-            return Ok(expenses);
+                if (expenses == null || !expenses.Any()) // Liste boşsa NotFound dön
+                {
+                    return NotFound("Bu kategoriye ait harcama bulunamadı!"); 
+                }
+
+                return Ok(expenses); // Harcama varsa geri döndür
+            }
+            catch (UnauthorizedAccessException ex) // Yetkisiz erişim durumunda hata mesajı
+            {
+                return Unauthorized(ex.Message); // "Yetkiniz yok" mesajını döndürüyoruz Managerdan
+            }
         }
     }
 }

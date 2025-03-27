@@ -56,6 +56,7 @@ builder.Services.AddCors(options =>
             .AllowCredentials()); // Cookie'lerin çalýþmasý için þart!
 });
 
+builder.Services.AddHttpContextAccessor();
 
 //Services Registration --AUTOFAC--
 builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());

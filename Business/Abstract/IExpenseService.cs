@@ -10,11 +10,11 @@ namespace Business.Abstract
 {
     public interface IExpenseService
     {
-        void Add(ExpenseDto expenseDto);
-        void Update(Guid id,ExpenseDto expenseDto);
-        void Delete(Guid id);
-        List<Expense> GetExpensesByUserId(Guid userId);
-        List<Expense> GetExpenseByCategoryId(Guid categoryId , Guid userId);
+        (bool success, string message) Add(ExpenseDto expenseDto);
+        (bool success, string message) Update(Guid id,ExpenseDto expenseDto);
+        (bool success, string message) Delete(Guid id);
+        List<Expense> GetExpensesByUserId();
+        List<Expense> GetExpenseByCategoryId(Guid categoryId);
 
     }
 }
