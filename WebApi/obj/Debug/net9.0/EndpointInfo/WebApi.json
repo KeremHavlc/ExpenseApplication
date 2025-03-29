@@ -484,14 +484,6 @@
       "CategoryDto": {
         "type": "object",
         "properties": {
-          "categoryId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "userId": {
-            "type": "string",
-            "format": "uuid"
-          },
           "categoryName": {
             "type": "string"
           }
@@ -515,10 +507,6 @@
             "format": "date-time"
           },
           "categoryId": {
-            "type": "string",
-            "format": "uuid"
-          },
-          "userId": {
             "type": "string",
             "format": "uuid"
           }

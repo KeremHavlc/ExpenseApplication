@@ -18,10 +18,6 @@ namespace Business.Concrete
         public (bool success, string message) Add(ExpenseDto expenseDto)
         {
             var userId = _currentUserService.UserId;
-            if (expenseDto.UserId != userId)
-            {
-                return (false, "Bu işlem için yetkiniz yok!");
-            }
             var newExpense = new Expense
             {
                 Title = expenseDto.Title,

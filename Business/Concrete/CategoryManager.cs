@@ -20,13 +20,10 @@ namespace Business.Concrete
         public (bool success , string message) Add(CategoryDto categoryDto)
         {
             var userId = _currentUserService.UserId;
-            if(categoryDto.UserId != userId)
-            {
-                return (false, "Bu işlem için yetkiniz yok!");  
-            }
+            
             var newCategory = new Category
             {
-                Id = categoryDto.CategoryId,
+                Id = Guid.NewGuid(),
                 CategoryName = categoryDto.CategoryName,
                 UserId = userId
             };
